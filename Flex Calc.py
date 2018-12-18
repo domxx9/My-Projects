@@ -23,21 +23,16 @@ def time_func(a):
     b = td(hours=user_hours, minutes=user_minute)
     return b
 
-# --------------------GUI--------------------#
-base = Tk
-
-
 
 # --------------------Code and Variables--------------------#
-
 
 
 flex = input("Enter your flex amount in HHMM:")
 static_time = ["1600", "1700", "1730", "1800"]
 static_flex = ["0200", "0100", "0030"]
-#now = da.datetime.now()
-diff = 60 * 60 * 24
-now = da.datetime(*da.datetime.fromtimestamp(ca.timegm(da.datetime.today().utctimetuple()) - diff).utctimetuple()[:3], hour=14, minute=00)
+now = da.datetime.now()
+# diff = 60 * 60 * 24
+# now = da.datetime(*da.datetime.fromtimestamp(ca.timegm(da.datetime.today().utctimetuple()) - diff).utctimetuple()[:3], hour=14, minute=00)
 balance = now + time_func(flex)
 now_hour_min = td(hours=now.hour, minutes=now.minute)
 balance = td(hours=balance.hour, minutes=balance.minute)
@@ -71,3 +66,14 @@ print("Time when at +0:30 : "+str(balance + time_func(static_flex[2])))
 print("Time when at -0:30 : "+str(balance - time_func(static_flex[2])))
 print("Time when at -1:00 : "+str(balance - time_func(static_flex[1])))
 print("Time when at -2:00 : "+str(balance - time_func(static_flex[0])))
+
+# --------------------GUI--------------------#
+
+base = Tk()
+one = Label(base, text="Time when balance at 00:00 : " +str(balance), bg="grey")
+one.pack(side=BOTTOM)
+three = Label(base, text="Amount of time for lunch : " +str(lunch), bg="grey")
+three.pack(side=BOTTOM)
+two = Label(base, text="Time and Date now : " +str(now), bg="grey")
+two.pack(side=BOTTOM)
+base.mainloop()
