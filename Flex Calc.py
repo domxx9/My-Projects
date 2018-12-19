@@ -4,7 +4,6 @@ import datetime as da
 import calendar as ca
 
 
-
 # --------------------Functions--------------------#
 
 def lunch_func(t):
