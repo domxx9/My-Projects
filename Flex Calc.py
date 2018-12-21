@@ -18,11 +18,13 @@ def lunch_func(t):
     else:
         exit("Please enter a valid lunch option!")
 
+
 def time_func(a):
     user_hours = int(a[:2])
     user_minute = int(a[2:5])
     b = td(hours=user_hours, minutes=user_minute)
     return b
+
 
 def if_func(a, b):
     if a == "1":
@@ -35,16 +37,31 @@ def if_func(a, b):
     balance = balance + time_func(lunch) + afternoon_time
     return lunch, flav, balance
 
+
+def custom_time_func():
+    q = input("Do you want to enter a custom time Y/N :")
+    if q == "y" or q == "Y":
+        a = input("Enter a custom time in HHMM format:")
+        user_hours = int(a[:2])
+        user_minute = int(a[2:5])
+        diff = 60 * 60 * 24
+        now = da.datetime(
+            *da.datetime.fromtimestamp(ca.timegm(da.datetime.today().utctimetuple()) - diff).utctimetuple()[:3],
+            hour=int(user_hours), minute=int(user_minute))
+        return now
+    else:
+        now = da.datetime.now()
+        return now
+
+
 # --------------------Code and Variables--------------------#
 
 
+now = custom_time_func()
 flex = input("Enter your flex amount in HHMM:")
 static_time = ["1600", "1700", "1730", "1800"]
 static_flex = ["0200", "0100", "0030"]
-# now = da.datetime.now()
-diff = 60 * 60 * 24
 lunch = 0
-now = da.datetime(*da.datetime.fromtimestamp(ca.timegm(da.datetime.today().utctimetuple()) - diff).utctimetuple()[:3], hour=8, minute=30)
 balance = now + time_func(flex)
 now_hour_min = td(hours=now.hour, minutes=now.minute)
 balance = td(hours=balance.hour, minutes=balance.minute)
@@ -53,7 +70,7 @@ flav = time_func(flex)
 
 if ((now.hour <= 13 and now.minute <= 44) or (now.hour <= 12 and now.minute >= 45)) and now.hour >= 9:
     lunch, flav, balance = if_func("1",balance)
-if now.hour <= 9:
+if now.hour < 9:
     lunch, flav, balance = if_func("2", balance)
 
 # --------------------Code and Printing--------------------#
