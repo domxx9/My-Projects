@@ -38,7 +38,7 @@ def if_func(b, c):  # This is what enable you to check flex before 1:45 and 9am
     return lunch, flav, balance
 
 
-def custom_time_func():  # This allows a custom time to be used for debuging purposes .
+def custom_time_func():  # This allows a custom time to be used for debugging purposes .
     q = input("Do you want to enter a custom time Y/N : ")
     if q == "y" or q == "Y":
         a = input("Enter a custom time in HHMM format : ")
