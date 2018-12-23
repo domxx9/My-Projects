@@ -1,6 +1,8 @@
 import datetime as da
 from datetime import timedelta as td
 
+import flex_calc
+
 def login():
     a = input("Please enter your name: ")
     print("Hello " + a)
@@ -25,10 +27,14 @@ def in_or_out(a):
 
 def interface():
     a = login()
-    b = input("Do you want to clock in or out")
-    db_value = str(a + ", " + in_or_out(b))
-    filename = str(a + da.datetime.now().strftime("%d""%m""%y") + ".txt")
-    return db_value, filename
+    b = input("Do you want to clock in, out or view your flex")
+    if b != "flex" or b == "in" or b == "out":
+        db_value, filename = get_file_info(a, b)
+        open_add_file(db_value, filename)
+    elif b == "flex":
+        flex_calc.flex_calc()
+    else:
+        print("why have you done this")
 
 
 def open_add_file(db_value, filename):
@@ -37,14 +43,9 @@ def open_add_file(db_value, filename):
     f.close()
 
 
-db_value, filename = interface()
+def get_file_info(a, b):
+    db_value = str(a + ", " + in_or_out(b))
+    filename = str(a + da.datetime.now().strftime("%d""%m""%y") + ".txt")
+    return db_value, filename
 
-open_add_file(db_value, filename)
-print(db_value)
-print(filename)
-print(time_stamp())
-x = "in"
-
-print(in_or_out(x))
-y = "out"
-print(in_or_out(y))
+interface()
