@@ -27,12 +27,18 @@ def in_or_out(a):
 
 def interface():
     a = login()
-    b = input("Do you want to clock in, out or view your flex")
-    if b != "flex" or b == "in" or b == "out":
+    print("Enter 1 to go to the flex calculator;")
+    print("Enter 2 to view your flex;")
+    print("Enter 3 to clock \"IN\".")
+    print("Enter 4 to clock \"OUT\".")
+    b = input("Please choose from the above options : ")
+    if b == "3" or b == "4":
         db_value, filename = get_file_info(a, b)
         open_add_file(db_value, filename)
-    elif b == "flex":
+    elif b == "1":
         flex_calc.flex_calc()
+    elif b == "2":
+        print("not done yet")
     else:
         print("why have you done this")
 

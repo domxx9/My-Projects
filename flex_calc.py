@@ -19,13 +19,12 @@ def flex_calc():
         else:
             exit("Please enter a valid lunch option!")
 
-
     def time_func(a):  # Converts HHMM string in to timedelta
         user_hours = int(a[:2])
+
         user_minute = int(a[2:5])
         b = td(hours=user_hours, minutes=user_minute)
         return b
-
 
     def if_func(b, c):  # This is what enable you to check flex before 1:45 and 9am
         if c.hour < 9:
@@ -37,7 +36,6 @@ def flex_calc():
         flav = time_func(flex) + time_func(lunch) + afternoon_time
         balance = balance + time_func(lunch) + afternoon_time
         return lunch, flav, balance
-
 
     def custom_time_func():  # This allows a custom time to be used for debugging purposes .
         q = input("Do you want to enter a custom time Y/N : ")
@@ -54,9 +52,25 @@ def flex_calc():
             now = da.datetime.now()
             return now
 
+    def advancedoptions():
+        a = input("Do you want do see the advanced options")
+        if a == "Y" or a == "y":
+            if now.hour < 16:
+                print("Balance at 4:00 pm : " + str(flav - (time_func(static_time[0]) - now_hour_min)))
+            if now.hour < 17:
+                print("Balance at 5:00 pm : " + str(flav - (time_func(static_time[1]) - now_hour_min)))
+            if (now.hour <= 17 and now.minute <= 30) or (now.hour <= 16 and now.minute >= 31):
+                print("Balance at 5:30 pm : " + str(flav - (time_func(static_time[2]) - now_hour_min)))
+            if now.hour < 18:
+                print("Balance at 6:00 pm : " + str(flav - (time_func(static_time[3]) - now_hour_min)))
+            print("Time when at +2:00 : " + str(balance + time_func(static_flex[0])))
+            print("Time when at +1:00 : " + str(balance + time_func(static_flex[1])))
+            print("Time when at +0:30 : " + str(balance + time_func(static_flex[2])))
+            print("Time when at -0:30 : " + str(balance - time_func(static_flex[2])))
+            print("Time when at -1:00 : " + str(balance - time_func(static_flex[1])))
+            print("Time when at -2:00 : " + str(balance - time_func(static_flex[0])))
 
     # --------------------Code and Variables--------------------#
-
 
     now = custom_time_func()
     flex = input("Enter your flex amount in HHMM:")
@@ -80,18 +94,4 @@ def flex_calc():
 
     print("Date/Time of run: "+str(now))
 
-    if now.hour <= 16 :
-        print("Balance at 4:00 pm : "+str(flav - (time_func(static_time[0]) - now_hour_min)))
-    if now.hour <= 17 :
-        print("Balance at 5:00 pm : "+str(flav - (time_func(static_time[1]) - now_hour_min)))
-    if (now.hour <= 17 and now.minute <= 30) or (now.hour <= 16 and now.minute >= 31):
-        print("Balance at 5:30 pm : "+str(flav - (time_func(static_time[2]) - now_hour_min)))
-    if now.hour <= 18 :
-        print("Balance at 6:00 pm : "+str(flav - (time_func(static_time[3]) - now_hour_min)))
-
-    print("Time when at +2:00 : "+str(balance + time_func(static_flex[0])))
-    print("Time when at +1:00 : "+str(balance + time_func(static_flex[1])))
-    print("Time when at +0:30 : "+str(balance + time_func(static_flex[2])))
-    print("Time when at -0:30 : "+str(balance - time_func(static_flex[2])))
-    print("Time when at -1:00 : "+str(balance - time_func(static_flex[1])))
-    print("Time when at -2:00 : "+str(balance - time_func(static_flex[0])))
+    advancedoptions()
