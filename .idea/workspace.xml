@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0a15648c-28f0-418d-871b-4760bc298e4d" name="Default Changelist" comment="" />
+    <list default="true" id="0a15648c-28f0-418d-871b-4760bc298e4d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/ES/ES.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/discord bot/Discord bot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/My-Projects.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/My-Projects.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -9,7 +15,20 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/discord bot/Discord bot.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="67" selection-start-line="5" selection-start-column="67" selection-end-line="5" selection-end-column="67" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -37,6 +56,8 @@
         <option value="$PROJECT_DIR$/flex_calc.py" />
         <option value="$PROJECT_DIR$/Flex Calculator/ClockinANDOUT.py" />
         <option value="$PROJECT_DIR$/Flex Calculator/flex_calc.py" />
+        <option value="$PROJECT_DIR$/ES/ES.py" />
+        <option value="$PROJECT_DIR$/discord bot/Discord bot.py" />
       </list>
     </option>
   </component>
@@ -54,7 +75,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -65,16 +85,22 @@
             <path>
               <item name="My-Projects" type="b2602c69:ProjectViewProjectNode" />
               <item name="My-Projects" type="462c0819:PsiDirectoryNode" />
+              <item name="discord bot" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="My-Projects" type="b2602c69:ProjectViewProjectNode" />
+              <item name="My-Projects" type="462c0819:PsiDirectoryNode" />
               <item name="Flex Calculator" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Flex Calculator/ClockinANDOUT.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/discord bot/Discord bot.py" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -94,7 +120,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.ClockinANDOUT">
+  <component name="RunManager" selected="Python.ES">
     <configuration name="ClockinANDOUT" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="My-Projects" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -108,6 +134,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Flex Calculator/ClockinANDOUT.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ES" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="My-Projects" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/discord bot" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/discord bot/Discord bot.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -140,9 +187,11 @@
     <list>
       <item itemvalue="Python.ClockinANDOUT" />
       <item itemvalue="Python.GUI2" />
+      <item itemvalue="Python.ES" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.ES" />
         <item itemvalue="Python.ClockinANDOUT" />
         <item itemvalue="Python.GUI2" />
       </list>
@@ -198,18 +247,18 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1176" extended-state="6" />
+    <frame x="678" y="196" width="1936" height="945" extended-state="0" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.21116377" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.21116377" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="0" />
-      <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.11690363" side_tool="true" visible="true" weight="0.3288719" />
-      <window_info anchor="bottom" id="Python Console" order="2" />
+      <window_info anchor="bottom" id="Terminal" order="0" sideWeight="0.4986835" weight="0.291587" />
+      <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.11795682" side_tool="true" visible="true" weight="0.32883435" />
+      <window_info anchor="bottom" id="Python Console" order="2" sideWeight="0.49921012" weight="0.3725702" />
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Find" order="4" sideWeight="0.49925596" weight="0.3289689" />
       <window_info anchor="bottom" id="Version Control" order="5" sideWeight="0.4997367" weight="0.3298279" />
-      <window_info anchor="bottom" id="Run" order="6" sideWeight="0.88309634" visible="true" weight="0.3288719" />
+      <window_info anchor="bottom" id="Run" order="6" sideWeight="0.8820432" weight="0.3288719" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -226,44 +275,31 @@
     <option name="LAST_COMMIT_MESSAGE" value="Amended so all flex values don't print out and changed the values for the interface" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/GUI.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GUI2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/GUI.py" />
+    <entry file="file://$PROJECT_DIR$/GUI2.py" />
     <entry file="file://$PROJECT_DIR$/Dom231218.txt" />
     <entry file="file://$PROJECT_DIR$/dom271218.txt" />
-    <entry file="file://$PROJECT_DIR$/flex_calc.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1003">
-          <caret line="59" column="29" selection-start-line="59" selection-start-column="29" selection-end-line="59" selection-end-column="29" />
-          <folding>
-            <element signature="e#51#87#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ClockinANDOUT.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="38" lean-forward="true" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/flex_calc.py" />
+    <entry file="file://$PROJECT_DIR$/ClockinANDOUT.py" />
     <entry file="file://$PROJECT_DIR$/Flex Calculator/database/dom281218.txt" />
     <entry file="file://$PROJECT_DIR$/Flex Calculator/ClockinANDOUT.py" />
     <entry file="file://$PROJECT_DIR$/Flex Calculator/flex_calc.py" />
+    <entry file="file://$PROJECT_DIR$/ES/ES.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/discord bot/Discord bot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="67" selection-start-line="5" selection-start-column="67" selection-end-line="5" selection-end-column="67" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>
